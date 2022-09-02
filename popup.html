@@ -4,9 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web blocker</title>
 </head>
+<style>
+    .container{
+        
+        width: 400px;
+        max-height: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .top{
+        height: 50%;
+    }
+    .top>h1{
+        font-family:  Georgia, serif;
+        text-align: center;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #4863A0;
+        border-bottom: 2px solid #F75D59
+    }
+    .topMainItem{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .info{
+        padding-left: 15px;
+    }
+    .info>p{
+        color: #DC143C;
+        font-size: 15px;
+    }
+    .info>h4{
+        color: #B048B5;
+        font-size: 20px;
+    }
+    #btn{
+        color: #DC143C;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 5px 10px;
+        background-color:  #8467D7;
+        border-radius: 10px ;
+        border: 1px solid black;
+        outline: none;
+
+    }
+    #btn:hover{
+        background-color: #DDA0DD;
+        cursor: pointer;
+    }
+    #btn:active{
+        background-color: aqua;
+
+    }
+    .bottom{
+        height: 35%;
+        position: relative;
+    }
+    .Err{
+        padding-top: 5px;
+    }
+    .Err>p{
+        font-size: 12px;
+        font-weight: bold;
+        background: lightgray;
+        padding: 2px 0px;
+        text-align: center;
+    }
+</style>
 <body>
-    
+    <div class="container">
+        <div class="top">
+            <h1>Website blocker</h1>
+            <div class="topMainItem">
+                <div class="info">
+                    <p>You are currently on:</p>
+                    <h4 id="url"></h4>
+
+                </div>
+                <button id="btn">Block this url</button>
+            </div>
+        </div>
+        <div>
+            <div class="bottom"></div>
+        </div>
+    </div>
 </body>
 </html>
+<script src="./scripts/popup.js"></script>
