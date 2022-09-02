@@ -1,3 +1,4 @@
+var popup = "";
 var WebUrl;
 var Hostname;
 
@@ -87,3 +88,4 @@ document.getElementById("btn").addEventListener("click",()=>{
         })
     }
 })
+
