@@ -1,6 +1,6 @@
 function CloseTab() {
   alert(
-    "This URL is completely blocked for today. This tab will close after you press OK"
+    "This URL is completely blocked for one hour. This tab will close after you press OK"
   );
   chrome.runtime.sendMessage({ CloseMe: true });
 }
@@ -13,10 +13,17 @@ chrome.runtime.onMessage.addListener((message, sender) => {
 
     var div = document.createElement("div");
     div.innerHTML = `
+
             <div class="WebPtopItem">
                 <h1>Web Productive</h1>
                 <div class="WebPtopItemMain">
                     <div class="WebPInfo">
+
+            <div class="STAYPtopItem">
+                <h1>Web-Blocker</h1>
+                <div class="STAYPtopItemMain">
+                    <div class="STAYPInfo">
+
                         <p>You are currently on :</p>
                         <h4 id="WebPurl">${window.location.hostname}</h4>
                     </div>
