@@ -13,32 +13,32 @@ chrome.runtime.onMessage.addListener((message, sender) => {
 
     var div = document.createElement("div");
     div.innerHTML = `
-            <div class="STAYPtopItem">
-                <h1>Stay Productive</h1>
-                <div class="STAYPtopItemMain">
-                    <div class="STAYPInfo">
+            <div class="WebPtopItem">
+                <h1>Web Productive</h1>
+                <div class="WebPtopItemMain">
+                    <div class="WebPInfo">
                         <p>You are currently on :</p>
-                        <h4 id="STAYPurl">${window.location.hostname}</h4>
+                        <h4 id="WebPurl">${window.location.hostname}</h4>
                     </div>
                 </div>
             </div>
     
-            <div class="STAYPbottomItem">
-                <div class="STAYPtimeCont">
+            <div class="WebPbottomItem">
+                <div class="WebPtimeCont">
                     <p>Time Remaining</p>
-                    <div class="STAYPtime">
-                        <div class="STAYPnumber">
-                            <p id="STAYPhour">${("0" + hour).slice(-2)}</p>
+                    <div class="WebPtime">
+                        <div class="WebPnumber">
+                            <p id="WebPhour">${("0" + hour).slice(-2)}</p>
                         </div>
                         <span>:</span>
         
-                        <div class="STAYPnumber">
-                            <p id="STAYPmin">${("0" + min).slice(-2)}</p>
+                        <div class="WebPnumber">
+                            <p id="WebPmin">${("0" + min).slice(-2)}</p>
                         </div>
                         <span>:</span>
         
-                        <div class="STAYPnumber">
-                            <p id="STAYPsec">${("0" + sec).slice(-2)}</p>
+                        <div class="WebPnumber">
+                            <p id="WebPsec">${("0" + sec).slice(-2)}</p>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ chrome.runtime.onMessage.addListener((message, sender) => {
     setInterval(() => {
       if (sec >= 1) {
         sec = sec - 1;
-        document.getElementById("STAYPsec").innerText = ("0" + sec).slice(-2);
+        document.getElementById("WebPsec").innerText = ("0" + sec).slice(-2);
       } else {
         CloseTab();
       }
